@@ -11,6 +11,7 @@
 			<artifactId>netty-all</artifactId>
 			<version>5.0.0.Alpha2</version>
 		</dependency>
+		<!-- http文件服务所需的netty包 -->
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
