@@ -45,7 +45,7 @@ public class Client {
 			Request request = new Request();
 			request.setId(1);
 			request.setName("pro" + 1);
-			request.setRequestMessage("Êý¾ÝÐÅÏ¢" + 1);
+			request.setRequestMessage("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢" + 1);
 			char separator = File.separatorChar;
 			File file = new File(System.getProperty("user.dir") + separator + "source" + separator + "2.png");
 			/*FileInputStream inputStream = new FileInputStream(file);
@@ -54,7 +54,7 @@ public class Client {
 			inputStream.close();
 			byte[] GzipData = GzipUtils.gzip(data);*/
 			request.setAttachment(getImg(file));
-			ChannelFuture f = future.channel().writeAndFlush((Object) request);
+			ChannelFuture f = future.channel().writeAndFlush(request);
 			/*future.channel().writeAndFlush(Unpooled.copiedBuffer("777".getBytes()));*/
 			future.channel().closeFuture().sync();
 			/*new Thread(()->{

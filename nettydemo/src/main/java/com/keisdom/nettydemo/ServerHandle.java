@@ -19,8 +19,7 @@ import io.netty.channel.ChannelHandlerContext;
 public class ServerHandle extends ChannelHandlerAdapter {
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		Object obj = (Object) msg;
-		Request request = (Request) obj;
+		Request request = (Request) msg;
 		System.out.println("client:" + request.getId() + "," + request.getName() + "," + request.getRequestMessage());
 		Response response = new Response();
 		response.setId(request.getId());
